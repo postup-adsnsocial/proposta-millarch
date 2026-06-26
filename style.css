@@ -838,7 +838,64 @@ p {
   }
 
   .timeline {
-    grid-template-columns: repeat(7, minmax(7.75rem, 1fr));
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .timeline::before {
+    top: 1.35rem;
+    bottom: 1.35rem;
+    left: 1.38rem;
+    width: 1px;
+    height: auto;
+    right: auto;
+  }
+
+  .timeline-item {
+    min-width: 0;
+    grid-template-columns: 2.8rem 1fr;
+    align-items: center;
+    gap: 0.9rem;
+    min-height: 4.35rem;
+    padding: 0.85rem 1rem;
+    background: rgba(251, 248, 242, 0.62);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  .timeline-item::before {
+    position: absolute;
+    left: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .timeline-item span {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 2.1rem;
+    height: 2.1rem;
+    place-items: center;
+    color: var(--terracotta);
+    background: var(--paper);
+    border: 1px solid rgba(158, 103, 82, 0.22);
+    border-radius: 50%;
+    font-size: 0.72rem;
+  }
+
+  .timeline-item strong {
+    max-width: none;
+    font-size: 1.02rem;
+  }
+
+  .js .timeline .reveal,
+  .timeline .reveal {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0ms;
   }
 
   .objective-grid,
