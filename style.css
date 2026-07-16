@@ -556,19 +556,29 @@ p {
 }
 
 .original-price,
+.previous-price,
 .special-note {
   font-family: "Outfit", system-ui, sans-serif;
   font-weight: 700;
   letter-spacing: 0;
 }
 
-.original-price {
+.original-price,
+.previous-price {
   width: fit-content;
   color: rgba(32, 33, 43, 0.5);
   font-size: 1rem;
+}
+
+.original-price {
   text-decoration: line-through;
   text-decoration-color: var(--terracotta);
   text-decoration-thickness: 2px;
+}
+
+.previous-price {
+  color: rgba(32, 33, 43, 0.62);
+  font-size: 0.92rem;
 }
 
 .special-note {
@@ -590,6 +600,49 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.6rem;
+}
+
+.bank-details {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.bank-details .label {
+  margin-bottom: 0.85rem;
+}
+
+.bank-details dl {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.bank-details div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.bank-details dt,
+.bank-details dd {
+  margin: 0;
+}
+
+.bank-details dt {
+  color: rgba(32, 33, 43, 0.48);
+  font-family: "Outfit", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bank-details dd {
+  color: var(--dark);
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .option-grid {
